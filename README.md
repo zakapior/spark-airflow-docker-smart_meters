@@ -1,11 +1,14 @@
-### DE.v2.4D.2.5
+### Portfolio project
 # Big Data Fundamentals project: Smart Meters
-This is repository for Turing College Data Engineering course Module 4D Sprint 2 - Big Data Fundamentals by Jakub Kluz.
 
-The purpose of this project is to iterate on the Big Data architecture and techniques, adjusting to changing requirements and introducing new ideas. Important changes from the previous project is the usage of Airflow, using half-hourly data to make the data more complete. The dataset have WAY more columns now.
+This is repository for Turing College Data Engineering course Module 4D Sprint 2 - Big Data Fundamentals by Jakub Kluz. It is an iteration on Sprint 1, that was about transforming [the source dataset from Kaggle](https://www.kaggle.com/datasets/jeanmidev/smart-meters-in-london) with Spark using PySpark interface. Spark jobs were executed as Docker containers and data requirements for two teams, Machine Learning and Data Analytics, were rather complex but met 100%.
+
+The purpose of this project is to iterate on the Big Data architecture and techniques, adjusting to changing requirements and introducing new ideas. Important changes from the previous project is the usage of Airflow, using half-hourly data to make the data more complete. The dataset has WAY more columns now.
+
+## Rationale
+The description of thought process and reasoning behind this code is available for an avid person in [separate file](doc/REASONING.md).
 
 # Environment
-
 I am developing on GNU/Linux Ubuntu 22.04 Server Edition using Oracle Free Tier ARM64 machine VM.Standard.A1.Flex with 4 ARM cores and 24 GB of RAM. The machine is working beautifuly for me for the whole Turing College course. Some other parts of my environment include:
 
 * Docker 24.05 from the Ubuntu repository along with Docker Compose 1.29.2 as a plugin (not yet integrated into Docker - it has happened in the following versions),
@@ -331,3 +334,7 @@ required group field_id=-1 spark_schema {
 Architecture:
 
 ![img](img/architecture.png)
+
+Dag structure:
+
+![img](img/dag_structure.png)
